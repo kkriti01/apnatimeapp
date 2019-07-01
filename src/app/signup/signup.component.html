@@ -1,0 +1,49 @@
+<div class="container mt-3" style="padding-top:40px; text-align: center">
+    <div class="row signup">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <form [formGroup]="UserForm" (ngSubmit)="onFormSubmit(UserForm.value)">
+              <h1 style="text-align:center">Register</h1>
+              <p style="text-align: right" >Already Registered? <a routerLink="/login">Login here</a></p>
+              <div class="signup">
+              <div class="input-group mb-4">
+
+                <input type="text" class="form-control" placeholder="Email"  formControlName="email">
+              </div>
+                <div class="input-group mb-4">
+                <input type="text" class="form-control" placeholder="Username"  formControlName="username">
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="First Name"  formControlName="first_name">
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Last Name"  formControlName="last_name">
+              </div>
+              <div class="input-group mb-3">
+                <input type="password" class="form-control" placeholder="Password"  formControlName="password1">
+              </div>
+               <div class="input-group mb-3">
+                <input type="password" class="form-control" placeholder="Password"  formControlName="password2">
+              </div>
+              <div class="input-group mb-4">
+                <input type="date" class="form-control" placeholder="Birth date"  formControlName="birth_date">
+              </div>
+              <div class="input-group mb-4">
+                <input type="number" class="form-control" placeholder="Years of experience"  formControlName="year_of_experience">
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Preferred language"  formControlName="preferred_language">
+              </div>
+              <div class="input-group mb-4">
+                <input type="text" class="form-control" placeholder="Address"  formControlName="address">
+              </div>
+                </div>
+              <button type="submit" class="btn btn-block btn-success">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

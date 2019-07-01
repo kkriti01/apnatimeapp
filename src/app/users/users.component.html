@@ -1,0 +1,31 @@
+
+<div class="row" style="height:auto; min-height:720px; background:blue">
+    <div class="col-sm-12">
+      <div class="text-center" style="margin:20px;padding:20px;color:white;">
+        Welcome to DashBoard
+      </div>
+     <div class="col-sm-3" style="text-align: center; margin-left: 500px">
+      <form name="form" (ngSubmit)="search()">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="icon-user"></i></span>
+                </div>
+                <input type="text" name="search" [(ngModel)]="model.search" class="form-control sty1" placeholder="Search keyword" required>
+                <br><button type="submit" class="btn btn-primary px-4">Search</button>
+
+              </div>
+
+            </form>
+</div>
+      <div *ngFor="let item of data" class="card text-center col-sm-3" style="margin-top: 6px; margin-left: 500px">
+        <div class="card-body ">
+          <h4 class="card-title" style="color: black">{{item.first_name}}  {{item.last_name}}</h4>
+              <p class="card-link" style="color: black">{{item.username}}</p>
+              <p class="card-link" style="color: black">{{item.birth_date}}</p>
+          <br><button (click)="editUser(item)" style="color: black">Edit</button>
+          <button (click)="deleteUser(item)" style="color: black">Delete</button>
+
+        </div>
+      </div>
+  </div>
+</div>
